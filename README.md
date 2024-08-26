@@ -1,24 +1,39 @@
-# README
+# Admin-ROR
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository is an administrative application for managing support tickets. It interacts with the `Ticket-ror` repository via API to update tickets with responses as an admin.
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+- Ruby on Rails
+- PostgreSQL
+- API access to the `Ticket-ror` repository
+- Postman for testing API endpoints
 
-* System dependencies
+## Dependencies
 
-* Configuration
+This repository depends on another repository:
 
-* Database creation
+- **Ticket-ror**: The main application where users create support tickets.
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+### 1. Clone the Repository
 
-* Services (job queues, cache servers, search engines, etc.)
+Clone this repository to your local machine:
 
-* Deployment instructions
+```bash
+git clone https://github.com/your-username/Admin-ror.git
+cd Admin-ror
 
-* ...
+
+use this to add an admin user: (postman)
+{
+  "user": {
+    "id": 3,
+    "username": "Admin",
+    "email": "admin@example.com",
+    "password": "password"
+  }
+}
+
+
