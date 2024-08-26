@@ -1,0 +1,66 @@
+/* Page background color */
+body {
+    background-color: #e0f0ff; /* Intense light blue background for the page */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Set a base font */
+  }
+  
+  /* Center the title */
+  h1 {
+    text-align: center; /* Center align the title */
+    margin: 20px auto; /* Margin for spacing above and below the title */
+  }
+  
+  /* Table for tickets */
+  .tickets-table {
+    width: 90%; /* Adjust width to create margin on left and right */
+    margin: 20px auto; /* Center horizontally and add top and bottom margin */
+    border-collapse: collapse;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow effect */
+  }
+  
+  .tickets-table th, .tickets-table td {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 15px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .tickets-table th {
+    background-color: #f4f4f4; /* Light gray background for headers */
+    font-weight: bold; /* Bold text for headers */
+  }
+  
+  .ticket-actions {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Red for delete button */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  
+  .btn-warning {
+    background-color: #ffc107; /* Yellow for close button */
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+  }
+  

@@ -1,0 +1,198 @@
+/* Page background color */
+body {
+  background-color: #e0f0ff; /* Intense light blue background for the page */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Set a base font */
+}
+
+/* Container for ticket details */
+.ticket-details {
+  background-color: #ffffff; /* White background for the details box */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow effect */
+  margin: 20px auto; /* Center horizontally */
+  max-width: 800px; /* Adjust the max-width as needed */
+  position: relative; /* Allow absolute positioning of child elements */
+}
+
+/* Container for chat responses and response form */
+.responses-container {
+  background-color: #ffffff; /* White background for the responses box */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow effect */
+  margin: 20px auto; /* Center horizontally */
+  max-width: 800px; /* Adjust the max-width as needed */
+}
+
+/* Title within the container */
+.ticket-header {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px; /* Space below the title */
+  text-align: center; /* Center align the title */
+}
+
+/* Styling for ticket title, description, and status */
+.ticket-title, .ticket-description, .ticket-status {
+  margin-bottom: 10px;
+}
+
+/* Style for action buttons */
+.ticket-actions {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: none; /* Remove any box shadow */
+  background-clip: padding-box; /* Ensure background does not overlap borders */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Red for delete button */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-warning {
+  background-color: #ffc107; /* Yellow for close button */
+}
+
+.btn-warning:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+/* Styling for response messages */
+.response-item {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.response-item.admin {
+  align-items: flex-end; /* Align admin responses to the right */
+}
+
+.response-item.user {
+  align-items: flex-start; /* Align user responses to the left */
+}
+
+.response-author {
+  font-weight: bold;
+  margin-bottom: 5px; /* Space between author label and response content */
+  text-align: right; /* Align author text to the right for admin */
+}
+
+.response-content {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow effect */
+}
+
+/* Specific adjustments for admin responses */
+.response-item.admin .response-content {
+  background-color: #e1e1e1; /* Light grey background for admin messages */
+}
+
+/* Specific adjustments for user responses */
+.response-item.user .response-content {
+  background-color: #f1f1f1; /* Slightly different grey for user messages */
+}
+
+/* Table for tickets */
+.tickets-table {
+  width: 90%; /* Adjust width to create margin on left and right */
+  margin: 20px auto; /* Center horizontally and add top and bottom margin */
+  border-collapse: separate; /* Separate borders for better styling */
+  border-spacing: 0; /* Remove spacing between cells */
+  border-radius: 10px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensure rounded corners apply to the table */
+  background-color: #ffffff; /* White background for the table */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow effect */
+}
+
+.tickets-table th, .tickets-table td {
+  border: 1px solid #ddd; /* Light gray border */
+  padding: 15px; /* Padding inside cells */
+  text-align: left; /* Align text to the left */
+}
+
+.tickets-table th {
+  background-color: #f0f0f0; /* Light gray for headers */
+  font-weight: bold; /* Bold text for headers */
+}
+
+.ticket-row-pending {
+  background-color: #ffffff; /* White background for pending tickets */
+}
+
+.ticket-row-closed {
+  background-color: #f8d7da; /* Light red background for closed tickets */
+}
+
+/* Form styling */
+.form-group {
+  margin-top: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  margin-top: 10px;
+  background-color: #007bff; /* Blue for submit button */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+/* Button styling */
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  color: #fff;
+}
+
+/* Centering the back button */
+.back-button {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Adding padding to the bottom of the ticket details */
+.ticket-details {
+  padding-bottom: 20px;
+}

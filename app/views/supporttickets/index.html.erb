@@ -1,0 +1,37 @@
+<h1>Support Tickets</h1>
+
+<% if @supporttickets.present? %>
+  <table class="tickets-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Created At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @supporttickets.each do |ticket| %>
+        <tr class="<%= ticket['status'] == 'closed' ? 'ticket-row-closed' : 'ticket-row-pending' %>">
+          <td>
+            <%= link_to ticket['title'], supportticket_path(ticket['id']) %>
+          </td>
+          <td>
+            <%= ticket['status'] %>
+          </td>
+          <td>
+            <%= ticket['created_at'] %>
+          </td>
+          <td class="ticket-actions">
+            <%= link_to 'Destroy Ticket', supportticket_path(ticket['id']), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+            <% unless ticket['status'] == 'closed' %>
+              <%= link_to 'Close Ticket', close_ticket_supportticket_path(ticket['id']), method: :patch, data: { confirm: 'Are you sure you want to close this ticket?' }, class: 'btn btn-warning' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No tickets available.</p>
+<% end %>
